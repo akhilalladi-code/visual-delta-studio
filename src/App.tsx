@@ -25,7 +25,6 @@ function App() {
   const [wipe, setWipe] = useState(50)
   const inputA = useRef<HTMLInputElement>(null)
   const inputB = useRef<HTMLInputElement>(null)
-  const canvasRef = useRef<HTMLCanvasElement>(null)
   const wipeRef = useRef<HTMLDivElement>(null)
 
   const load = useCallback((file: File, side: 'before' | 'after') => {
