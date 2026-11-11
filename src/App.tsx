@@ -65,7 +65,7 @@ function App() {
       const result = comparePixels(ac.getImageData(0, 0, width, height), bc.getImageData(0, 0, width, height), { threshold, amplification, align })
       const canvas = document.createElement('canvas')
       canvas.width = width; canvas.height = height
-      canvas.getContext('2d')?.putImageData(result.image, 0, 0)
+      canvas.getContext('2d')?.putImageData(new ImageData(result.image.data, result.image.width, result.image.height), 0, 0)
       setMetrics(result.metrics)
       setDiffUrl(canvas.toDataURL('image/png'))
       setBusy(false)
