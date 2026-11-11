@@ -4,5 +4,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/visual-delta-studio/',
   plugins: [react()],
-  test: { environment: 'node', include: ['src/**/*.test.ts'] },
 })
